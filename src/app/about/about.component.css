@@ -1,0 +1,15 @@
+.line-link {
+    color: gray; /* สีของลิงก์ */
+  }
+  
+  .line-link:hover {
+    color: black; /* สีเมื่อวางเมาส์ */
+  }
+
+  .card {/* ข้อความในการ์ด */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  

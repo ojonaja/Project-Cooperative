@@ -1,0 +1,38 @@
+.card {
+    transition: transform 0.3s ease; /* การเคลื่อนไหวที่ราบรื่น */
+    border: none; /* ไม่มีขอบการ์ด */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* เงาการ์ด */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* ขยายเมื่อเลื่อนเมาส์ผ่าน */
+  }
+  
+  
+  
+  .icon-bg {
+    /* สีพื้นหลังไอคอน */
+    padding: 2rem; /* ช่องว่างรอบไอคอน */
+    border-radius: 50%; /* ทำให้เป็นวงกลม */
+    display: inline-block; /* เพื่อให้จัดวางในแนวนอน */
+    margin-bottom: 1rem; /* ระยะห่างระหว่างไอคอนและชื่อ */
+  }
+  
+  .card-title {
+    color: #D5006D; /* สีข้อความสำหรับชื่อ */
+    font-weight: bold; /* หนักตัว */
+  }
+  .icon {
+    font-size: 3rem; /* ปรับขนาดไอคอนที่นี่ */
+    color: black; /* สีไอคอน */
+}
+/*ด้านล่าง*/
+
+.line-link {
+  color: gray; /* สีของลิงก์ */
+}
+
+.line-link:hover {
+  color: black; /* สีเมื่อวางเมาส์ */
+}
+ 
