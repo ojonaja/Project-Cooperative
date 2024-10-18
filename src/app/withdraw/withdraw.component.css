@@ -1,0 +1,8 @@
+.container {
+    max-width: 600px; /* จำกัดความกว้างของคอนเทนเนอร์ */
+    margin: auto; /* จัดให้อยู่ตรงกลาง */
+    background-color: rgba(196, 221, 194, 0.596); /* พื้นหลังสีขาวโปร่งแสง */
+    padding: 20px; /* ช่องว่างภายใน */
+    border-radius: 8px; /* มุมมน */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงา */
+}
