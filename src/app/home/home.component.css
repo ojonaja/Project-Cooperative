@@ -18,7 +18,7 @@
   }
   
   .card {
-    background-color: #ADD88D;
+    background-color: #2a836d;
     border-radius: 5px;
     padding: 20px;
     flex: 1;
@@ -31,9 +31,39 @@
     align-items: center;
     height: 150px;
     margin: 0 10px;
+    font-size: 30px; /* ปรับขนาดตัวอักษร */
+    color: white;    /* เปลี่ยนสีตัวอักษรเป็นสีขาว */
   }
   
   .card:hover {
-    background-color: #C8E6B2;
+    background-color: #399763;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows */
+  }
+  
+  .row {
+    display: flex;
+    gap: 30px; /* Space between cards in a row */
+  }
+  
+  .carousel-item {
+    height: 300px; /* Set a fixed height for the carousel */
+  }
+  
+  .carousel-item img {
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire carousel area */
+    object-position: center; /* Centers the image */
+  }
+  .card:hover {
+    transform: scale(1.05); /* ขยายเมื่อเลื่อนเมาส์ผ่าน */
+  }
+  .card {
+    transition: transform 0.3s ease; /* การเคลื่อนไหวที่ราบรื่น */
+    border: none; /* ไม่มีขอบการ์ด */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* เงาการ์ด */
   }
   

@@ -1,0 +1,20 @@
+.active-link {
+    font-weight: bold;
+  }
+  .navbar {
+    height: 80px; /* ปรับขนาดความสูงของแถบเมนูตามที่ต้องการ */
+  }
+  .navbar-brand {
+    font-size: 1.5rem; /* ปรับขนาดตัวหนังสือของโลโก้หรือชื่อเว็บ */
+  }
+  .nav-link {
+    font-size: 1.2rem; /* ปรับขนาดตัวหนังสือของลิงก์เมนู */
+  }
+  .nav-link {
+    transition: color 0.3s ease, transform 0.3s ease; /* สร้างการเปลี่ยนแปลงที่นุ่มนวล */
+}
+
+.nav-link:hover {
+    color: #000000; /* เปลี่ยนสีเมื่อเมาส์เอาไปวาง */
+    transform: translateY(-3px); /* ขยับขึ้นเล็กน้อย */
+}

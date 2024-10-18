@@ -13,6 +13,7 @@ import { WithdrawComponent } from './withdraw/withdraw.component';
 import { InterestComponent } from './interest/interest.component';
 import { ReportComponent } from './report/report.component';
 import { HttpClient } from '@angular/common/http';
+import { TransactionHistoryComponent } from './transaction-history/transaction-history.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HttpClient } from '@angular/common/http';
     DepositComponent,
     WithdrawComponent,
     InterestComponent,
-    ReportComponent
+    ReportComponent,
+    TransactionHistoryComponent
   ],
   imports: [
     BrowserModule,
