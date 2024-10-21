@@ -12,4 +12,11 @@
     align-items: center;
     text-align: center;
   }
+  .nav.flex-column .nav-item {
+    margin-bottom: 0.5rem; /* ลดระยะห่างด้านล่าง */
+    padding: 0;
+  }
   
+  .nav-link {
+    line-height: 0.5; /* ปรับระยะห่างระหว่างบรรทัด */
+  }

@@ -66,4 +66,52 @@
     border: none; /* ไม่มีขอบการ์ด */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* เงาการ์ด */
   }
+  .line-link {
+    color: gray; /* สีของลิงก์ */
+  }
   
+  .line-link:hover {
+    color: black; /* สีเมื่อวางเมาส์ */
+  }
+
+  .card {/* ข้อความในการ์ด */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .nav.flex-column .nav-item {
+    margin-bottom: 0.5rem; /* ลดระยะห่างด้านล่าง */
+    padding: 0;
+  }
+  
+  .nav-link {
+    line-height: 0.5; /* ปรับระยะห่างระหว่างบรรทัด */
+  }
+  .footer .container {
+    display: flex;
+    justify-content: space-between; /* กระจายคอลัมน์ */
+    flex-wrap: wrap; /* ให้แถวใหม่เกิดขึ้นถ้าความกว้างไม่เพียงพอ */
+  }
+
+  .footer .col {
+    flex: 1; /* ให้คอลัมน์มีขนาดเท่ากัน */
+    margin: 0 10px; /* ระยะห่างระหว่างคอลัมน์ */
+  }
+
+  .footer .nav {
+    list-style-type: none; /* ลบจุดหน้ารายการ */
+    padding-left: 0;
+  }
+
+  .footer .nav-link {
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+  }
+
+  .footer h6 {
+    margin-bottom: 10px;
+  }
+
+  .footer hr {
+    margin-top: 0;
+  }
