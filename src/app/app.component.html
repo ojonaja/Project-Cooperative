@@ -10,22 +10,38 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+    
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="nav navbar-nav mx-auto">
         <li class="nav-item">
           <a class="nav-link" routerLink="home"><i class="bi bi-house"></i> Home</a>
         </li>
+      
         <li class="nav-item">
           <a class="nav-link" routerLink="/about">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" routerLink="/contact">Contact</a>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Recommend
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#" routerLink="/profile">ดู/แก้ไขข้อมูลของฉัน</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/savings">เปิด/ปิดบัญชีเงินออม</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/deposit">ฝากเงิน</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/withdraw">ถอนเงิน</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/interest">คำนวณดอกเบี้ย</a></li>
+            <li><a class="dropdown-item" href="#" routerLink="/report">รายงานสมุดบัญชีเงินฝาก</a></li>
+          </ul>
+        </li>
       </ul>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
           <a class="nav-link" routerLink="/login">Logout</a>
         </li>
+        
       </ul>
     </div>
   </div>

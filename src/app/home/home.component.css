@@ -1,117 +1,119 @@
 .full-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .card-row {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 20px;
-    padding: 0 20px;
-  }
-  
-  .card {
-    background-color: #2a836d;
-    border-radius: 5px;
-    padding: 20px;
-    flex: 1;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
-    margin: 0 10px;
-    font-size: 30px; /* ปรับขนาดตัวอักษร */
-    color: white;    /* เปลี่ยนสีตัวอักษรเป็นสีขาว */
-  }
-  
-  .card:hover {
-    background-color: #399763;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Space between rows */
-  }
-  
-  .row {
-    display: flex;
-    gap: 30px; /* Space between cards in a row */
-  }
-  
-  .carousel-item {
-    height: 300px; /* Set a fixed height for the carousel */
-  }
-  
-  .carousel-item img {
-    height: 100%;
-    object-fit: cover; /* Ensures the image covers the entire carousel area */
-    object-position: center; /* Centers the image */
-  }
-  .card:hover {
-    transform: scale(1.05); /* ขยายเมื่อเลื่อนเมาส์ผ่าน */
-  }
-  .card {
-    transition: transform 0.3s ease; /* การเคลื่อนไหวที่ราบรื่น */
-    border: none; /* ไม่มีขอบการ์ด */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* เงาการ์ด */
-  }
-  .line-link {
-    color: gray; /* สีของลิงก์ */
-  }
-  
-  .line-link:hover {
-    color: black; /* สีเมื่อวางเมาส์ */
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  .card {/* ข้อความในการ์ด */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  .nav.flex-column .nav-item {
-    margin-bottom: 0.5rem; /* ลดระยะห่างด้านล่าง */
-    padding: 0;
-  }
-  
-  .nav-link {
-    line-height: 0.5; /* ปรับระยะห่างระหว่างบรรทัด */
-  }
-  .footer .container {
-    display: flex;
-    justify-content: space-between; /* กระจายคอลัมน์ */
-    flex-wrap: wrap; /* ให้แถวใหม่เกิดขึ้นถ้าความกว้างไม่เพียงพอ */
-  }
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
 
-  .footer .col {
-    flex: 1; /* ให้คอลัมน์มีขนาดเท่ากัน */
-    margin: 0 10px; /* ระยะห่างระหว่างคอลัมน์ */
-  }
+.card {
+  background-color: #2a836d;
+  border-radius: 5px;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  margin: 0 10px;
+  font-size: 30px; /* ปรับขนาดตัวอักษร */
+  color: white;    /* เปลี่ยนสีตัวอักษรเป็นสีขาว */
+}
 
-  .footer .nav {
-    list-style-type: none; /* ลบจุดหน้ารายการ */
-    padding-left: 0;
-  }
+.card:hover {
+  background-color: #399763;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between rows */
+}
 
-  .footer .nav-link {
-    text-decoration: none; /* ลบขีดเส้นใต้ */
-  }
+.row {
+  display: flex;
+  gap: 30px; /* Space between cards in a row */
+}
 
-  .footer h6 {
-    margin-bottom: 10px;
-  }
+.carousel-item {
+  height: 300px; /* Set a fixed height for the carousel */
+}
 
-  .footer hr {
-    margin-top: 0;
-  }
+.carousel-item img {
+  width: 100%; /* ปรับให้ภาพขยายเต็มความกว้าง */
+  height: 400px; /* กำหนดความสูงใหม่ของภาพ */
+  object-fit: cover; /* ทำให้ภาพครอบคลุมพื้นที่ */
+  object-position: top; /* จัดตำแหน่งภาพให้อยู่ที่ด้านบน */
+}
+
+.card:hover {
+  transform: scale(1.05); /* ขยายเมื่อเลื่อนเมาส์ผ่าน */
+}
+.card {
+  transition: transform 0.3s ease; /* การเคลื่อนไหวที่ราบรื่น */
+  border: none; /* ไม่มีขอบการ์ด */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* เงาการ์ด */
+}
+.line-link {
+  color: gray; /* สีของลิงก์ */
+}
+
+.line-link:hover {
+  color: black; /* สีเมื่อวางเมาส์ */
+}
+
+.card {/* ข้อความในการ์ด */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.nav.flex-column .nav-item {
+  margin-bottom: 0.5rem; /* ลดระยะห่างด้านล่าง */
+  padding: 0;
+}
+
+.nav-link {
+  line-height: 0.5; /* ปรับระยะห่างระหว่างบรรทัด */
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between; /* กระจายคอลัมน์ */
+  flex-wrap: wrap; /* ให้แถวใหม่เกิดขึ้นถ้าความกว้างไม่เพียงพอ */
+}
+
+.footer .col {
+  flex: 1; /* ให้คอลัมน์มีขนาดเท่ากัน */
+  margin: 0 10px; /* ระยะห่างระหว่างคอลัมน์ */
+}
+
+.footer .nav {
+  list-style-type: none; /* ลบจุดหน้ารายการ */
+  padding-left: 0;
+}
+
+.footer .nav-link {
+  text-decoration: none; /* ลบขีดเส้นใต้ */
+}
+
+.footer h6 {
+  margin-bottom: 10px;
+}
+
+.footer hr {
+  margin-top: 0;
+}
