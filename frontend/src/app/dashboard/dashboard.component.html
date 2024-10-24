@@ -1,0 +1,20 @@
+<div *ngIf="userRole === 'admin'">
+    <h1>Welcome, Admin</h1>
+    <!-- เนื้อหาที่เฉพาะเจาะจงสำหรับ admin -->
+    <p>This is the admin panel.</p>
+    
+    <button (click)="toggleEditMode()">{{ editMode ? 'Finish Editing' : 'Edit Content' }}</button>
+  
+    <div *ngIf="editMode">
+      <h2>Edit Content</h2>
+      <textarea placeholder="Edit your content here..."></textarea>
+      <button (click)="saveChanges()">Save Changes</button>
+    </div>
+  </div>
+  
+  <div *ngIf="userRole === 'user'">
+    <h1>Welcome, User</h1>
+    <!-- เนื้อหาที่เฉพาะเจาะจงสำหรับ user -->
+    <p>This is the user dashboard.</p>
+  </div>
+  
