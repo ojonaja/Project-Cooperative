@@ -23,7 +23,7 @@
         </form>
 
         <!-- Change buttons to text links -->
-        <a href="#" (click)="toggleRegisterForm()" class="link-button">Register</a>
+        <a routerLink="/register" class="link-button">Register</a>
         <a href="#" (click)="toggleForgotPassword()" class="link-button">Forgot Password?</a>
 
         <div *ngIf="showRegisterForm">

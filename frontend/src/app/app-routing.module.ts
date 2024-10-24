@@ -1,3 +1,4 @@
+// src/app/app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
@@ -12,6 +13,7 @@ import { InterestComponent } from './interest/interest.component';
 import { ReportComponent } from './report/report.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { authGuard } from './auth.guard'; // Ensure you have AuthGuard implemented
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to Login on root
@@ -26,6 +28,7 @@ const routes: Routes = [
   { path: 'interest', component: InterestComponent }, // Interest page
   { path: 'report', component: ReportComponent }, // Report page
   { path: 'dashboard', component: DashboardComponent }, // Dashboard page
+  { path: 'register', component: RegisterComponent }, // Register page
 ];
 
 @NgModule({
