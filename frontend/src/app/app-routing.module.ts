@@ -14,6 +14,8 @@ import { ReportComponent } from './report/report.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { authGuard } from './auth.guard'; // Ensure you have AuthGuard implemented
 import { RegisterComponent } from './register/register.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ComplaintComponent } from './complaint/complaint.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to Login on root
@@ -29,6 +31,9 @@ const routes: Routes = [
   { path: 'report', component: ReportComponent }, // Report page
   { path: 'dashboard', component: DashboardComponent }, // Dashboard page
   { path: 'register', component: RegisterComponent }, // Register page
+  { path: 'forgot-password', component: ForgotPasswordComponent },
+  { path: 'complaint', component: ComplaintComponent },
+
 ];
 
 @NgModule({

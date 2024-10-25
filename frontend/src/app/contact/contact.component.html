@@ -24,15 +24,15 @@
       </div>
   
       <div class="col-3">
-        <div class="card text-center p-4">
-          <div class="icon-bg">
-            <i class="bi bi-chat-dots icon"></i>
-          </div>
-          <h5 class="card-title">ร้องเรียนทุกข์</h5>
-          <p class="card-text">ร้องเรียนต่างๆ</p>
+        <div class="card text-center p-4" [routerLink]="['/complaint']">
+            <div class="icon-bg">
+                <i class="bi bi-chat-dots icon"></i>
+            </div>
+            <h5 class="card-title">ร้องเรียนทุกข์</h5>
+            <p class="card-text">ร้องเรียนต่างๆ</p>
         </div>
-      </div>
-  
+    </div>
+    
       <div class="col-3">
         <div class="card text-center p-4">
           <div class="icon-bg">
@@ -77,15 +77,15 @@
     </div>
 
     <div class="col-3">
-      <div class="card text-center p-4">
-        <div class="icon-bg">
-          <i class="bi bi-info-circle icon"></i>
-        </div>
-        <h5 class="card-title">ข้อมูล</h5>
-        <p class="card-text">รายละเอียดเพิ่มเติม</p>
+      <div class="card text-center p-4" [routerLink]="['/about']"> <!-- เปลี่ยน '/info' เป็นเส้นทางที่คุณต้องการ -->
+          <div class="icon-bg">
+              <i class="bi bi-info-circle icon"></i>
+          </div>
+          <h5 class="card-title">ข้อมูล</h5>
+          <p class="card-text">รายละเอียดเพิ่มเติม</p>
       </div>
-    </div>
   </div>
+  
 
 
 
