@@ -10,7 +10,7 @@ const sqlConfig = {
     database: process.env.DB, // ชื่อฐานข้อมูล
     port: parseInt(process.env.SQL_PORT), // พอร์ต SQL Server
     options: {
-        encrypt: false, // ใช้ true สำหรับ Azure SQL Database
+        encrypt: false, // ใช้ true สำหรับ Azure SQL Database1
         trustServerCertificate: true, // ใช้ true ในการพัฒนาเพื่อข้ามการตรวจสอบใบรับรอง
     },
 };
