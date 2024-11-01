@@ -1,3 +1,4 @@
+// app.js
 const express = require('express');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
@@ -7,7 +8,7 @@ require('dotenv').config();  // โหลด environment variables
 
 // นำเข้า routes
 const indexRouter = require('./routes/indexRoutes');
-const userRouter = require('./routes/userRoutes');
+const registerRoutes = require('./routes/registerRoutes');
 
 // สร้างแอป Express
 const app = express();
@@ -22,7 +23,7 @@ app.use(cors());
 
 // Routes
 app.use('/', indexRouter);
-app.use('/api/user', userRouter);
+app.use('/api/register', registerRoutes); // ให้แน่ใจว่ากำหนดเป็น /api/register
 
 // จัดการข้อผิดพลาด 404
 app.use((req, res, next) => {

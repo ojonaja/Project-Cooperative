@@ -1,18 +1,32 @@
-const mysql = require('mysql2');
+// dbconfig.js
+require('dotenv').config(); // โหลด environment variables จาก .env
+const sql = require('mssql');
 
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '23500', // ใช้ environment variable
-    database: 'villagecoop'
-});
+// อ่านค่าจาก .env
+const sqlConfig = {
+    user: process.env.USER, // ชื่อผู้ใช้ SQL Server
+    password: process.env.PASSWORD, // รหัสผ่านของผู้ใช้
+    server: process.env.HOST, // ชื่อโฮสต์ของ SQL Server
+    database: process.env.DB, // ชื่อฐานข้อมูล
+    port: parseInt(process.env.SQL_PORT), // พอร์ต SQL Server
+    options: {
+        encrypt: false, // ใช้ true สำหรับ Azure SQL Database
+        trustServerCertificate: true, // ใช้ true ในการพัฒนาเพื่อข้ามการตรวจสอบใบรับรอง
+    },
+};
 
-connection.connect((err) => {
-    if (err) {
-        console.error('Error connecting to MySQL:', err);
-        return;
+// ฟังก์ชันสำหรับเชื่อมต่อกับฐานข้อมูล
+const connectToDatabase = async () => {
+    try {
+        await sql.connect(sqlConfig);
+        console.log('Connected to SQL Server database');
+    } catch (err) {
+        console.error('Error connecting to SQL Server:', err);
     }
-    console.log('Connected to MySQL database');
-});
+};
 
-module.exports = connection;
+// เรียกใช้ฟังก์ชันเพื่อเชื่อมต่อกับฐานข้อมูล
+connectToDatabase();
+
+// ส่งออก sql และ sqlConfig เพื่อให้สามารถใช้งานในไฟล์อื่นได้
+module.exports = { sql, sqlConfig };
