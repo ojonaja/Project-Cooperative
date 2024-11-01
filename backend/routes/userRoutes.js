@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const connection = require('../config');
 
 // User login route
 router.post('/login', (req, res) => {
