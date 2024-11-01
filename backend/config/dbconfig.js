@@ -2,7 +2,7 @@ const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
+    user: 'sa',
     password: '23500', // ใช้ environment variable
     database: 'villagecoop'
 });
