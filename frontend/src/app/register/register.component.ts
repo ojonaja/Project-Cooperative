@@ -1,7 +1,6 @@
-// src/app/register/register.component.ts
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RegisterService } from '../services/register.service'; // Updated service import
+import { RegisterService } from '../services/register.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,8 +13,8 @@ export class RegisterComponent implements OnInit {
   errorMessage: string = '';
 
   constructor(
-    private fb: FormBuilder, 
-    private registerService: RegisterService, // Updated service name
+    private fb: FormBuilder,
+    private registerService: RegisterService,
     private router: Router
   ) {
     this.registerForm = this.fb.group({
@@ -29,19 +28,25 @@ export class RegisterComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   onSubmit() {
     if (this.registerForm.valid) {
       const memberData = this.registerForm.value;
+      console.log('Submitting member data:', memberData); // ตรวจสอบข้อมูลที่จะส่ง
       this.registerService.registerMember(memberData).subscribe(
         response => {
+          console.log('Registration successful:', response);
           this.router.navigate(['/success']);
         },
         error => {
+          console.error('Registration failed:', error);
           this.errorMessage = 'Registration failed. Please try again.';
         }
       );
+    } else {
+      console.error('Form is invalid:', this.registerForm.errors); // ตรวจสอบความถูกต้องของฟอร์ม
     }
   }
 }
+

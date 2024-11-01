@@ -1,4 +1,4 @@
-// src/app/services/register.service.ts
+//register.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterService { // Updated service name
-  private apiUrl = 'http://your-api-url.com/api'; // URL ของ API ของคุณ
+export class RegisterService {
+  private apiUrl = 'http://localhost:3000/api/register'; // เปลี่ยน URL ให้ตรงกับ API ของคุณ
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   registerMember(memberData: any): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/register-member`, memberData);
+    return this.http.post<any>(this.apiUrl, memberData);
   }
 }
