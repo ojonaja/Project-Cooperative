@@ -1,22 +1,27 @@
 // controllers/registerController.js
-const sql = require('mssql');
-
-// คอนฟิกการเชื่อมต่อ SQL Server
-const sqlConfig = {
-    user: 'sa',
-    password: '23500',
-    server: 'localhost',
-    database: 'villagecoop',
-    options: {
-        encrypt: true, // ใช้ true สำหรับ Azure
-        trustServerCertificate: false, // ใช้ false สำหรับ production
-    },
-};
+const dbconfig = require('../config/dbconfig');
 
 const registerMember = async (req, res) => {
-    // รหัสการลงทะเบียนสมาชิก
-    // ...
+    const { name, address, age, idCard, phone, email, password } = req.body;
+
+    try {
+        let pool = await sql.connect(sqlConfig);
+        await pool.request()
+            .input('name', sql.NVarChar, name)
+            .input('address', sql.NVarChar, address)
+            .input('age', sql.Int, age)
+            .input('idCard', sql.NVarChar, idCard)
+            .input('phone', sql.NVarChar, phone)
+            .input('email', sql.NVarChar, email)
+            .input('password', sql.NVarChar, password) // ควรจะทำการเข้ารหัสก่อนถ้ามีการจัดเก็บ
+            .query(`INSERT INTO Members (name, address, age, idCard, phone, email, password)
+                   VALUES (@name, @address, @age, @idCard, @phone, @email, @password)`);
+
+        res.status(201).json({ message: 'Registration successful' });
+    } catch (err) {
+        console.error('Database error:', err);
+        res.status(500).json({ message: 'Server error' });
+    }
 };
 
-// ส่งออกฟังก์ชัน
 module.exports = { registerMember };
